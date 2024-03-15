@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.BorrowHistoryFormController">
+   <children>
+      <AnchorPane layoutX="-2.0" layoutY="-5.0" prefHeight="811.0" prefWidth="1194.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="31.0" layoutY="161.0" prefHeight="623.0" prefWidth="1135.0" style="-fx-background-color: #e3ebef; -fx-background-radius: 30;" styleClass="shadow" stylesheets="@../Style/Shadow.css" />
+            <TableView fx:id="tblBorrows" layoutX="48.0" layoutY="215.0" prefHeight="554.0" prefWidth="1083.0">
+               <columns>
+                  <TableColumn fx:id="IdColumn" prefWidth="96.00006866455078" text="Borrow_Id" />
+                  <TableColumn fx:id="nameColumn" prefWidth="251.9998779296875" text="User_Name" />
+                  <TableColumn fx:id="bookIdColumn" prefWidth="215.2000732421875" text="Book_Id" />
+                  <TableColumn fx:id="CountColumn" prefWidth="251.7332763671875" text="Borrow Count" />
+                  <TableColumn fx:id="DateColumn" prefWidth="266.66668701171875" text="Due date" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="44.0" layoutY="44.0" prefHeight="64.0" prefWidth="356.0" style="-fx-background-color: #6c0096; -fx-background-radius: 30;" styleClass="shadow" stylesheets="@../Style/Shadow.css">
+         <children>
+            <Label layoutX="62.0" layoutY="9.0" styleClass="shadow" stylesheets="@../Style/Shadow.css" text="Borrow Details" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
