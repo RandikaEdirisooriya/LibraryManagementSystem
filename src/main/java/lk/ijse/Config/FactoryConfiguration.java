@@ -3,6 +3,7 @@ package lk.ijse.Config;
 
 import lk.ijse.Entity.Book;
 import lk.ijse.Entity.Borrow;
+import lk.ijse.Entity.Return;
 import lk.ijse.Entity.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -15,7 +16,7 @@ public class FactoryConfiguration {
     private FactoryConfiguration() {
         Configuration configuration =
                 new Configuration().configure()
-                        .addAnnotatedClass(Book.class).addAnnotatedClass(User.class).addAnnotatedClass(Borrow.class);
+                        .addAnnotatedClass(Book.class).addAnnotatedClass(User.class).addAnnotatedClass(Borrow.class).addAnnotatedClass(Return.class);
         sessionFactory = configuration.buildSessionFactory();
     }
 

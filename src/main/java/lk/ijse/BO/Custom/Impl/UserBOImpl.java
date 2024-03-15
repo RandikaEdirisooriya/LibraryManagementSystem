@@ -38,7 +38,7 @@ public class UserBOImpl implements UserBO {
     }
 
     @Override
-    public boolean deleteBook(String name) throws SQLException, ClassNotFoundException {
+    public boolean deleteUser(String name) throws SQLException, ClassNotFoundException {
         return userDao.delete(name);
     }
 }

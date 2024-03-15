@@ -47,7 +47,7 @@ public class UsersFormController {
             deleteButton.setOnAction(event -> {
                 UserDto v = getTableView().getItems().get(getIndex());
                 try {
-                    userBO.deleteBook(v.getName());
+                    userBO.deleteUser(v.getName());
                     loadAllUsers();
 
                     ImageView imageView = new ImageView(new Image("/Asset/icons8-done-96.png"));

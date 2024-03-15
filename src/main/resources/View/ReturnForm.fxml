@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.ReturnFormController">
    <children>
       <AnchorPane prefHeight="811.0" prefWidth="1194.0" style="-fx-background-color: white;">
@@ -19,14 +18,29 @@
                         <Font name="System Bold" size="23.0" />
                      </font>
                   </JFXButton>
-                  <JFXTextField fx:id="BookAuthor" layoutX="367.0" layoutY="59.0" prefHeight="38.0" prefWidth="293.0" promptText="Enter Book Id:">
+                  <JFXTextField fx:id="BookId" layoutX="61.0" layoutY="65.0" onAction="#SearchBtnOnaction" prefHeight="25.0" prefWidth="216.0" promptText="Book ID:">
                      <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField fx:id="BookAuthor1" layoutX="367.0" layoutY="109.0" prefHeight="38.0" prefWidth="293.0" promptText="Enter ">
+                  <JFXTextField fx:id="BookAuthor" layoutX="351.0" layoutY="65.0" prefHeight="25.0" prefWidth="216.0" promptText="Book Author:">
                      <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="BookGenre" layoutX="351.0" layoutY="124.0" prefHeight="25.0" prefWidth="216.0" promptText="Book Genre:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="BookTitle" layoutX="61.0" layoutY="124.0" prefHeight="25.0" prefWidth="216.0" promptText="Book Title:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="ReturnBookCount" layoutX="641.0" layoutY="125.0" prefHeight="25.0" prefWidth="216.0" promptText="Return Book Count :">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </JFXTextField>
                </children>

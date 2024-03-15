@@ -111,7 +111,7 @@ public class UserBorrowFormController {
 
     public void BorrowBtnOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
       //  System.out.println(generateNewId());
-        String id = "BR005";
+        String id = "BR006";
 
         String bookId = SearchBooks.getText();
         String dueDate = DueDate.getText();
@@ -282,7 +282,10 @@ updateBooks();
         }
     }
 
-    public void ReturnBtnOnAction(ActionEvent actionEvent) {
+    public void ReturnBtnOnAction(ActionEvent actionEvent) throws IOException {
+        Node node = (Node) FXMLLoader.load(getClass().getResource("/View/ReturnForm.fxml"));
+        BorrowAnchore.getChildren().clear();
+        BorrowAnchore.getChildren().setAll(node);
 
     }
 

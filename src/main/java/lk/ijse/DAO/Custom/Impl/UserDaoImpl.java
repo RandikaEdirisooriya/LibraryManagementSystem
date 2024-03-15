@@ -40,7 +40,7 @@ public class UserDaoImpl implements UserDao {
 
         Transaction transaction = session.beginTransaction();
 
-        session.createNativeQuery("delete from User where ID='"+name+"'", User.class).executeUpdate();
+        session.createNativeQuery("delete from User where name='"+name+"'", User.class).executeUpdate();
 
         transaction.commit();
         session.close();
