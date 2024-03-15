@@ -108,6 +108,32 @@ public class BookDaoImpl implements BookDao {
             return list;
         }
 
+    @Override
+    public int getBookCount() {
+        Session session = null;
+        Transaction transaction = null;
+        Long count = 0L;
+        try {
+            session = FactoryConfiguration.getInstance().getSession();
+            transaction = session.beginTransaction();
+            Query query = session.createQuery("SELECT COUNT(ID) FROM Book");
+            count = (Long) query.uniqueResult();
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        } finally {
+            if (session != null && session.isOpen()) {
+                session.close();
+            }
+        }
+        return count.intValue();
+
+    }
+
+
 
     public List<BookDto> getAllBooks() throws SQLException, ClassNotFoundException {
         List<BookDto> books = new ArrayList<>();

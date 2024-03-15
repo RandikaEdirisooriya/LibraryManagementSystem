@@ -1,17 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.DashboardController">
    <children>
-      <AnchorPane prefHeight="811.0" prefWidth="1194.0" style="-fx-background-color: black;">
+      <ImageView fitHeight="812.0" fitWidth="1198.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Asset/Rectangle%20168.png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="811.0" prefWidth="1194.0">
          <children>
-            <Label layoutX="376.0" layoutY="284.0" text="Dashboard" textFill="WHITE">
+            <Pane layoutX="176.0" layoutY="335.0" prefHeight="200.0" prefWidth="328.0" style="-fx-background-color: #e3ebef;" styleClass="shadow" stylesheets="@../Style/Shadow.css">
+               <children>
+                  <Label layoutX="67.0" layoutY="29.0" prefHeight="50.0" prefWidth="216.0" styleClass="shadow" stylesheets="@../Style/Shadow.css" text="Book Types" textFill="#3b2b2b">
+                     <font>
+                        <Font name="System Bold" size="34.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="BookCount" layoutX="137.0" layoutY="89.0" prefHeight="50.0" prefWidth="216.0" styleClass="shadow" stylesheets="@../Style/Shadow.css" text="2" textFill="#a92424">
+                     <font>
+                        <Font name="System Bold" size="34.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="676.0" layoutY="335.0" prefHeight="200.0" prefWidth="328.0" style="-fx-background-color: #e3ebef;" styleClass="shadow" stylesheets="@../Style/Shadow.css">
+               <children>
+                  <Label layoutX="70.0" layoutY="28.0" prefHeight="50.0" prefWidth="216.0" styleClass="shadow" stylesheets="@../Style/Shadow.css" text="User Count" textFill="#2b363b">
+                     <font>
+                        <Font name="System Bold" size="34.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="UserCount" layoutX="140.0" layoutY="88.0" prefHeight="50.0" prefWidth="216.0" styleClass="shadow" stylesheets="@../Style/Shadow.css" text="2" textFill="#a92424">
+                     <font>
+                        <Font name="System Bold" size="34.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="314.0" layoutY="54.0" prefHeight="109.0" prefWidth="510.0" style="-fx-background-color: #6c0096; -fx-background-radius: 30;" styleClass="shadow" stylesheets="@../Style/Shadow.css">
+         <children>
+            <Label layoutX="38.0" layoutY="9.0" styleClass="shadow" stylesheets="@../Style/Shadow.css" text="WELCOME TO BOOKCRAFT" textFill="WHITE">
                <font>
-                  <Font size="92.0" />
+                  <Font name="System Bold" size="34.0" />
+               </font>
+            </Label>
+            <Label fx:id="NameLabel" layoutX="219.0" layoutY="52.0" prefHeight="34.0" prefWidth="170.0" styleClass="shadow" stylesheets="@../Style/Shadow.css" text="Rana:" textFill="#a1ff43">
+               <font>
+                  <Font name="System Bold" size="35.0" />
                </font>
             </Label>
          </children>

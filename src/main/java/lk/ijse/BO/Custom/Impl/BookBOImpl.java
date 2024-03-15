@@ -54,6 +54,11 @@ public class BookBOImpl implements BookBO {
             return null;
         }
 
+    @Override
+    public int getBookCount() {
+        return bookDao.getBookCount();
+    }
+
 
     @Override
     public BookDto getBooks(String ID) throws Exception {

@@ -25,6 +25,8 @@ public interface BookBO extends SuperBO {
 
 
     Book getBookById(String bookId) throws SQLException, ClassNotFoundException;
+
+    int getBookCount();
 }
 
 

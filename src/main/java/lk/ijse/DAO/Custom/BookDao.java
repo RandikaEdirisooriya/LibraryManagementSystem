@@ -13,4 +13,6 @@ public interface BookDao extends CrudDao<Book> {
     BookDto getBookById(String ID) throws Exception;
 
     List<Book> getAllsBooks();
+
+    int getBookCount();
 }
