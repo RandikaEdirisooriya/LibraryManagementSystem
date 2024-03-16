@@ -69,4 +69,10 @@ public class MainController {
         CommonAnchore.getChildren().clear();
         CommonAnchore.getChildren().setAll(node);
     }
+
+    public void BranchBtnOnAction(ActionEvent actionEvent) throws IOException {
+        Node node = (Node) FXMLLoader.load(getClass().getResource("/View/BranchForm.fxml"));
+        CommonAnchore.getChildren().clear();
+        CommonAnchore.getChildren().setAll(node);
+    }
 }

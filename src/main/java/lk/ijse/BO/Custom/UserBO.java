@@ -14,4 +14,6 @@ public interface UserBO extends SuperBO {
     List<UserDto> getAllUser() throws Exception;
 
     boolean deleteUser(String name) throws SQLException, ClassNotFoundException;
+
+    int getUserCount();
 }

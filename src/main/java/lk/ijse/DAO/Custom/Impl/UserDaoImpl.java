@@ -7,6 +7,7 @@ import lk.ijse.Entity.Book;
 import lk.ijse.Entity.User;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -70,5 +71,29 @@ public class UserDaoImpl implements UserDao {
         transaction.commit();
         session.close();
         return list;
+    }
+
+    @Override
+    public int getUserCount() {
+        Session session = null;
+        Transaction transaction = null;
+        Long count = 0L;
+        try {
+            session = FactoryConfiguration.getInstance().getSession();
+            transaction = session.beginTransaction();
+            Query query = session.createQuery("SELECT COUNT(name) FROM User");
+            count = (Long) query.uniqueResult();
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        } finally {
+            if (session != null && session.isOpen()) {
+                session.close();
+            }
+        }
+        return count.intValue();
     }
 }

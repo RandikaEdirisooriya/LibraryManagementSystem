@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface UserDao extends CrudDao<User> {
     List<User> getAllUsers();
+
+    int getUserCount();
 }

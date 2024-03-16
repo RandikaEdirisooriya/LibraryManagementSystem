@@ -41,4 +41,9 @@ public class UserBOImpl implements UserBO {
     public boolean deleteUser(String name) throws SQLException, ClassNotFoundException {
         return userDao.delete(name);
     }
+
+    @Override
+    public int getUserCount() {
+        return userDao.getUserCount();
+    }
 }

@@ -1,9 +1,6 @@
 package lk.ijse.DAO;
 
-import lk.ijse.DAO.Custom.Impl.BookDaoImpl;
-import lk.ijse.DAO.Custom.Impl.BorrowDaoImpl;
-import lk.ijse.DAO.Custom.Impl.ReturnDaoImpl;
-import lk.ijse.DAO.Custom.Impl.UserDaoImpl;
+import lk.ijse.DAO.Custom.Impl.*;
 
 public class DAOFactory {
     private static DAOFactory daoFactory;
@@ -16,7 +13,7 @@ public class DAOFactory {
     }
 
     public enum DAOTypes {
-        BOOK,USER,BORROW,RETURN
+        BOOK,USER,BORROW,RETURN,BRANCH
     }
 
     public SuperDao getDAO(DAOTypes types){
@@ -29,6 +26,8 @@ public class DAOFactory {
                 return new UserDaoImpl();
                 case RETURN:
                 return new ReturnDaoImpl();
+                case BRANCH:
+                return new BranchDaoImpl();
             default:
                 return null;
         }
