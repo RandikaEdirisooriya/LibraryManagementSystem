@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="523.0" prefWidth="496.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.AdminLoginController">
    <children>
       <AnchorPane prefHeight="523.0" prefWidth="497.0" style="-fx-background-color: #E2FFFF;">
@@ -21,12 +20,12 @@
                   </Label>
                </children>
             </AnchorPane>
-            <JFXTextField layoutX="124.0" layoutY="159.0" prefHeight="44.0" prefWidth="258.0" promptText="          Enter Your Admin Name" style="-fx-background-color: white; -fx-background-radius: 20;" styleClass="shadow" stylesheets="@../Style/Shadow.css" unFocusColor="WHITE">
+            <JFXTextField fx:id="Name" layoutX="124.0" layoutY="159.0" prefHeight="44.0" prefWidth="258.0" promptText="          Enter Your Admin Name" style="-fx-background-color: white; -fx-background-radius: 20;" styleClass="shadow" stylesheets="@../Style/Shadow.css" unFocusColor="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </JFXTextField>
-            <JFXPasswordField layoutX="125.0" layoutY="228.0" prefHeight="44.0" prefWidth="258.0" promptText="          Enter Your Company Code" style="-fx-background-color: white; -fx-background-radius: 20;" styleClass="shadow" stylesheets="@../Style/Shadow.css" unFocusColor="WHITE">
+            <JFXPasswordField fx:id="Code" layoutX="125.0" layoutY="228.0" prefHeight="44.0" prefWidth="258.0" promptText="          Enter Your Company Code" style="-fx-background-color: white; -fx-background-radius: 20;" styleClass="shadow" stylesheets="@../Style/Shadow.css" unFocusColor="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>

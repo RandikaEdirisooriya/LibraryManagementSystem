@@ -46,4 +46,6 @@ public class UserBOImpl implements UserBO {
     public int getUserCount() {
         return userDao.getUserCount();
     }
+
+
 }

@@ -96,4 +96,11 @@ public class UserDaoImpl implements UserDao {
         }
         return count.intValue();
     }
+    public int countByUsernameAndPassword(String username, String password) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Query<User> query = session.createQuery("SELECT COUNT(u) FROM User u WHERE u.name = :username AND u.password = :password", User.class);
+        query.setParameter("username", username);
+        query.setParameter("password", password);
+        return query.getResultList().size();
+    }
 }

@@ -16,4 +16,8 @@ public interface UserBO extends SuperBO {
     boolean deleteUser(String name) throws SQLException, ClassNotFoundException;
 
     int getUserCount();
+
+
+
+
 }
